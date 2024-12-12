@@ -14,6 +14,13 @@ class Customer(models.Model):
     def __str__(self):
         return self.name
 
+class Salon(models.Model):
+    name = models.CharField(max_length=20)
+    location = models.CharField(max_length=20)
+    description = models.TextField()
+    image = models.ImageField(upload_to='images/')
+    def __str__(self):
+        return self.name
 
 class Salonist(models.Model):
     name = models.CharField(max_length=20)

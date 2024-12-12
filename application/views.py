@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 
 from application.forms import CustomerForm, ContactUsForm
-from application.models import Service
+from application.models import Service, Salon
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    salons = Salon.objects.all()
+    return render(request, 'index.html', {'salons': salons})
 
 # Contact page
 def contact(request):
