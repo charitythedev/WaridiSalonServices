@@ -17,3 +17,7 @@ def contact(request):
     else:
         form = CustomerForm()
     return  render(request,'contact.html',{'form':form})
+
+
+def services(request):
+   return render(request, 'services.html')
