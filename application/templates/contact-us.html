@@ -1,0 +1,72 @@
+{% extends  'base.html' %}
+
+{% block content %}
+
+<!-- Services Section -->
+<section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p> To get our services you can contact us through:</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gx-lg-0 gy-4">
+
+            <div class="col-lg-4">
+                <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>A1 Wiper Street, Misheveve,535022</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+2547 1234 5678</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>waridisalon@gmail.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-clock flex-shrink-0"></i>
+                        <div>
+                            <h3>Open Hours:</h3>
+                            <p>Mon-Sat: 10AM - 10PM</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+
+                <form action="" method="POST" class="div container-fluid" data-aos="fade" data-aos-delay="100">
+                    {% csrf_token %}
+                    {{contactor.as_p}}
+                    <button type="submit" class=" btn btn-success">Send Message</button>
+                </form>
+
+            </div><!-- End Contact Form -->
+
+        </div>
+
+    </div>
+
+</section><!-- /Contact Section -->
+
+{% endblock %}

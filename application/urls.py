@@ -22,8 +22,10 @@ from application import views
 from project import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
-    path('contact/', views.contact, name='contact'),
-    path('services/', views.services, name='services')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('index/', views.index, name='index'),
+                  path('contact/', views.contact, name='contact'),
+                  path('services/', views.services, name='services'),
+                  path('contactus/', views.contactus, name='contactus')
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
