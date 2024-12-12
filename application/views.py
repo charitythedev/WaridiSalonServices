@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 
 from application.forms import CustomerForm
+from application.models import Service
 
 
 # Create your views here.
@@ -20,4 +21,5 @@ def contact(request):
 
 
 def services(request):
-   return render(request, 'services.html')
+   data = Service.objects.all()
+   return render(request, 'services.html',{'data':data})
